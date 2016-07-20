@@ -145,6 +145,9 @@ angular.module( "ngAutocomplete", [])
                             })
                         }
                     }
+                    if ($event.keyCode === 13) { //Prevent submitting form on enter
+                        $event.preventDefault()
+                    }
                 })
 
                 //function to get retrieve the autocompletes first result using the AutocompleteService
